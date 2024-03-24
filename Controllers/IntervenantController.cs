@@ -66,5 +66,10 @@ namespace Prj_Gestion_Evénement_UPF.Controllers
                 MessageBox.Show("Intervenant introuvable !");
             }
         }
+        public Intervenant GetIntervenantById(int intervenantId)
+        {
+            return _service.GetById(intervenantId);
+        }
+
     }
 }

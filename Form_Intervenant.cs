@@ -54,7 +54,7 @@ namespace Prj_Gestion_Evénement_UPF
             try
             {
                 // Appeler la méthode AjouterIntervenant du contrôleur
-                _intervenantController.AjouterIntervenant(nom, prenom, dateNaissance, specialite, sexe, email);
+                _intervenantController.AjouterIntervenant(nom, prenom,  specialite, sexe, email);
 
                 // Actualiser les données affichées dans le DataGridView
                 RefreshDataGridView();
@@ -102,7 +102,6 @@ namespace Prj_Gestion_Evénement_UPF
             Spécialié.Text = "";
             Email.Text = "";
             Sexe.SelectedIndex = -1; // Réinitialiser la sélection du sexe
-            dateNaissance.Value = DateTime.Today; // Réinitialiser la date de naissance
         }
 
         private void RefreshDataGridView()
@@ -152,7 +151,6 @@ namespace Prj_Gestion_Evénement_UPF
                 // Afficher les détails de l'intervenant dans les contrôles de saisie
                 Nom.Text = intervenant.Nom;
                 Prenom.Text = intervenant.Prenom;
-                dateNaissance.Value = intervenant.DateNaissance;
                 Spécialié.Text = intervenant.Specialite;
                 Sexe.Text = intervenant.Sexe;
                 Email.Text = intervenant.Email;

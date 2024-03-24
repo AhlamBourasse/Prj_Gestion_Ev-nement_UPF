@@ -92,6 +92,10 @@
     <Compile Include="Migrations\202403232137382_mig2.Designer.cs">
       <DependentUpon>202403232137382_mig2.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202403242231092_mig3.cs" />
+    <Compile Include="Migrations\202403242231092_mig3.Designer.cs">
+      <DependentUpon>202403242231092_mig3.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -110,6 +114,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202403232137382_mig2.resx">
       <DependentUpon>202403232137382_mig2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202403242231092_mig3.resx">
+      <DependentUpon>202403242231092_mig3.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
