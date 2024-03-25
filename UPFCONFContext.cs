@@ -35,6 +35,13 @@ namespace Prj_Gestion_Evénement_UPF
                 .HasRequired(i => i.Participant)
                 .WithMany()
                 .HasForeignKey(i => i.ParticipantId);
+
+            modelBuilder.Entity<Intervenant>()
+                .HasMany(i => i.Evenements) // Indiquez que l'Intervenant a plusieurs événements
+                .WithRequired(e => e.Intervenant) // Chaque événement a un seul Intervenant
+                .HasForeignKey(e => e.IntervenantId) // Clé étrangère dans Evenement
+                .WillCascadeOnDelete(false); // Désactiver la suppression en cascade
+
         }
     }
 }

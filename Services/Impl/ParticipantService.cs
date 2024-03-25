@@ -13,5 +13,6 @@ namespace Prj_Gestion_Evénement_UPF.Services.Impl
         public ParticipantService(IDao<Participant> dao) : base(dao)
         {
         }
+
     }
 }

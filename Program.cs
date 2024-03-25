@@ -16,7 +16,7 @@ namespace Prj_Gestion_Evénement_UPF
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form_Intervenant());
+            Application.Run(new frm_Menue());
         }
     }
 }

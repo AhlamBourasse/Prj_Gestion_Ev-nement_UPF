@@ -23,7 +23,7 @@ namespace Prj_Gestion_Evénement_UPF.Controllers
             return _service.GetAll();
         }
 
-        public void AjouterEvenement(string titre, TypeEvenement type, DateTime dateDebut, DateTime dateFin, string lieu)
+        public void AjouterEvenement(string titre, TypeEvenement type, DateTime dateDebut, DateTime dateFin, string lieu, int intervenantId)
         {
             var evenement = new Evenement
             {
@@ -31,12 +31,13 @@ namespace Prj_Gestion_Evénement_UPF.Controllers
                 Type = type,
                 DateDebut = dateDebut,
                 DateFin = dateFin,
-                Lieu = lieu
+                Lieu = lieu,
+                IntervenantId = intervenantId
             };
             _service.Add(evenement);
         }
 
-        public void ModifierEvenement(int evenementId, string titre, TypeEvenement type, DateTime dateDebut, DateTime dateFin, string lieu)
+        public void ModifierEvenement(int evenementId, string titre, TypeEvenement type, DateTime dateDebut, DateTime dateFin, string lieu, int intervenantId)
         {
             var evenement = _service.GetById(evenementId);
             if (evenement != null)
@@ -46,6 +47,7 @@ namespace Prj_Gestion_Evénement_UPF.Controllers
                 evenement.DateDebut = dateDebut;
                 evenement.DateFin = dateFin;
                 evenement.Lieu = lieu;
+                evenement.IntervenantId = intervenantId;
                 _service.Update(evenement);
             }
             else
@@ -65,6 +67,10 @@ namespace Prj_Gestion_Evénement_UPF.Controllers
             {
                 MessageBox.Show("Événement introuvable !");
             }
+        }
+        public Evenement GetEvenementById(int evenementId)
+        {
+            return _service.GetById(evenementId);
         }
     }
 }

@@ -24,5 +24,7 @@ namespace Prj_Gestion_Evénement_UPF.Entities
         [Required]
         public string Email { get; set; }
 
+        public string NomComplet => $"{Nom} {Prenom}";
+
     }
 }

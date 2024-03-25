@@ -35,6 +35,11 @@ namespace Prj_Gestion_Evénement_UPF.Controllers
             _service.Add(participant);
         }
 
+        public Participant GetParticipantById(int participantId)
+        {
+            return _service.GetById(participantId);
+        }
+
         public void ModifierParticipant(int participantId, string nom, string prenom, string email , string sexe)
         {
             var participant = _service.GetById(participantId);

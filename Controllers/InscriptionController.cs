@@ -33,9 +33,24 @@ namespace Prj_Gestion_Evénement_UPF.Controllers
             _service.Add(inscription);
         }
 
-        public void SupprimerInscription(int evenementId, int participantId)
+        public void ModifierInscription(int inscriptionId, int evenementId, int participantId)
         {
-            var inscription = _service.Find(i => i.EvenementId == evenementId && i.ParticipantId == participantId).FirstOrDefault();
+            var inscription = _service.GetById(inscriptionId);
+            if (inscription != null)
+            {
+                inscription.EvenementId = evenementId;
+                inscription.ParticipantId = participantId;
+                _service.Update(inscription);
+            }
+            else
+            {
+                MessageBox.Show("Inscription introuvable !");
+            }
+        }
+
+        public void SupprimerInscription(int inscriptionId)
+        {
+            var inscription = _service.GetById(inscriptionId);
             if (inscription != null)
             {
                 _service.Remove(inscription);
@@ -44,6 +59,11 @@ namespace Prj_Gestion_Evénement_UPF.Controllers
             {
                 MessageBox.Show("Inscription introuvable !");
             }
+        }
+
+        public Inscription GetInscriptionById(int inscriptionId)
+        {
+            return _service.GetById(inscriptionId);
         }
     }
 }

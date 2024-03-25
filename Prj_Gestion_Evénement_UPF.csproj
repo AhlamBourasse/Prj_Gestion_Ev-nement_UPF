@@ -72,11 +72,29 @@
     <Compile Include="Entities\Evenement.cs" />
     <Compile Include="Entities\Inscription.cs" />
     <Compile Include="Entities\Participant.cs" />
+    <Compile Include="Form_Evenement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Evenement.Designer.cs">
+      <DependentUpon>Form_Evenement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Inscription.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Inscription.Designer.cs">
+      <DependentUpon>Form_Inscription.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form_Intervenant.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form_Intervenant.Designer.cs">
       <DependentUpon>Form_Intervenant.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Participant.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Participant.Designer.cs">
+      <DependentUpon>Form_Participant.cs</DependentUpon>
     </Compile>
     <Compile Include="frm_Menue.cs">
       <SubType>Form</SubType>
@@ -96,6 +114,14 @@
     <Compile Include="Migrations\202403242231092_mig3.Designer.cs">
       <DependentUpon>202403242231092_mig3.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202403250228153_mig4.cs" />
+    <Compile Include="Migrations\202403250228153_mig4.Designer.cs">
+      <DependentUpon>202403250228153_mig4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202403250305378_mig5.cs" />
+    <Compile Include="Migrations\202403250305378_mig5.Designer.cs">
+      <DependentUpon>202403250305378_mig5.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -106,8 +132,20 @@
     <Compile Include="Services\Impl\Service.cs" />
     <Compile Include="Services\IService.cs" />
     <Compile Include="UPFCONFContext.cs" />
+    <EmbeddedResource Include="Form_Evenement.resx">
+      <DependentUpon>Form_Evenement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Inscription.resx">
+      <DependentUpon>Form_Inscription.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form_Intervenant.resx">
       <DependentUpon>Form_Intervenant.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Participant.resx">
+      <DependentUpon>Form_Participant.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_Menue.resx">
+      <DependentUpon>frm_Menue.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202403210116277_mig1.resx">
       <DependentUpon>202403210116277_mig1.cs</DependentUpon>
@@ -117,6 +155,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202403242231092_mig3.resx">
       <DependentUpon>202403242231092_mig3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202403250228153_mig4.resx">
+      <DependentUpon>202403250228153_mig4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202403250305378_mig5.resx">
+      <DependentUpon>202403250305378_mig5.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
